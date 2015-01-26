@@ -1,20 +1,23 @@
-<h1>Listing articles</h1>
+<h1>Article Listings</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2">...</th>
-  </tr>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th style="width: 50px"></th>
+      <th style="width: 50px"></th>
+    </tr>
+  </thead>
 
   <% @articles.each do |article| %>
   <tr>
     <td><%= article.title %></td>
     <td><%= article.text %></td>
-    <td><%= link_to 'Show', article_path(article) %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Show', article_path(article), class: 'btn btn-default btn-sm' %></td>
+    <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default btn-sm' %></td>
   </tr>
   <% end %>
 </table>
 
-<%= link_to 'New article', new_article_path %>
+<%= link_to 'New article', new_article_path, class: 'btn btn-primary' %>
