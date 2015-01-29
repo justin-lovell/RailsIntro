@@ -1,2 +1,2 @@
-FROM rails:onbuild
-MAINTAINER Justin Lovell "justinl@nvisionit.co.za"
+
+FROM rails:4.2

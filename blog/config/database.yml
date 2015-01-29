@@ -26,10 +26,10 @@ production:
 
 docker:
   adapter: postgresql
-  database: blog_database
-  host: some-postgres
-  username: postgres
-  password: mysecretpassword
+  database: docker
+  host: sql01
+  username: docker
+  password: docker
   pool: 5
   timeout: 5000
   port: 5433
